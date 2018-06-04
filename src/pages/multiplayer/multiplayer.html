@@ -1,0 +1,108 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Tic Tac Toe</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<h1 *ngIf = "player==0 ||player==2">Player 1</h1>
+<h1 *ngIf = "player==1">Player 2</h1>
+
+<ion-grid>
+  <ion-row>
+    <ion-col col-4 *ngIf="visited[0]==0" tappable (click)='cellSelect(0)'>
+      
+      <ion-icon name="close" class="close" *ngIf = "flag[0] == 1 && visited[0] == 1"></ion-icon>
+      <ion-icon name="radio-button-off" class="off" *ngIf = "flag[0] == 2 && visited[0] == 1"></ion-icon>
+    </ion-col>
+    <ion-col col-4 *ngIf="visited[0]==1">
+      
+      <ion-icon name="close" class="close" *ngIf = "flag[0] == 1 && visited[0] == 1"></ion-icon>
+      <ion-icon name="radio-button-off" class="off" *ngIf = "flag[0] == 2 && visited[0] == 1"></ion-icon>
+    </ion-col>
+
+    <ion-col col-4 *ngIf="visited[1]==0" tappable (click)='cellSelect(1)'>
+      <ion-icon name="close" class="close" *ngIf = "flag[1] == 1 && visited[1] == 1"></ion-icon>
+      <ion-icon name="radio-button-off" class="off" *ngIf = "flag[1] == 2 && visited[1] == 1"></ion-icon>
+    </ion-col>
+    <ion-col col-4 *ngIf="visited[1]==1">
+      <ion-icon name="close" class="close" *ngIf = "flag[1] == 1 && visited[1] == 1"></ion-icon>
+      <ion-icon name="radio-button-off" class="off" *ngIf = "flag[1] == 2 && visited[1] == 1"></ion-icon>
+    </ion-col>
+    
+    <ion-col col-4 *ngIf="visited[2]==0" tappable (click)='cellSelect(2)'>
+      <ion-icon name="close" class="close" *ngIf = "flag[2] == 1 && visited[2] == 1"></ion-icon>
+      <ion-icon name="radio-button-off" class="off" *ngIf = "flag[2] == 2 && visited[2] == 1"></ion-icon>
+    </ion-col>
+    <ion-col col-4 *ngIf="visited[2]==1">
+      <ion-icon name="close" class="close" *ngIf = "flag[2] == 1 && visited[2] == 1"></ion-icon>
+      <ion-icon name="radio-button-off" class="off" *ngIf = "flag[2] == 2 && visited[2] == 1"></ion-icon>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-4 *ngIf="visited[3]==0" tappable (click)='cellSelect(3)'>
+      <ion-icon name="close" class="close" *ngIf = "flag[3] == 1 && visited[3] == 1"></ion-icon>
+      <ion-icon name="radio-button-off" class="off" *ngIf = "flag[3] == 2 && visited[3] == 1"></ion-icon>
+    </ion-col>
+    <ion-col col-4 *ngIf="visited[3]==1">
+      <ion-icon name="close" class="close" *ngIf = "flag[3] == 1 && visited[3] == 1"></ion-icon>
+      <ion-icon name="radio-button-off" class="off" *ngIf = "flag[3] == 2 && visited[3] == 1"></ion-icon>
+    </ion-col>
+
+    <ion-col col-4 *ngIf="visited[4]==0" tappable (click)='cellSelect(4)'>
+      <ion-icon name="close" class="close" *ngIf = "flag[4] == 1 && visited[4] == 1"></ion-icon>
+      <ion-icon name="radio-button-off" class="off" *ngIf = "flag[4] == 2  && visited[4] == 1"></ion-icon>
+    </ion-col>
+    <ion-col col-4 *ngIf="visited[4]==1">
+      <ion-icon name="close" class="close" *ngIf = "flag[4] == 1 && visited[4] == 1"></ion-icon>
+      <ion-icon name="radio-button-off" class="off" *ngIf = "flag[4] == 2  && visited[4] == 1"></ion-icon>
+    </ion-col>
+
+    <ion-col col-4 *ngIf="visited[5]==0" tappable (click)='cellSelect(5)'>
+      <ion-icon name="close" class="close" *ngIf = "flag[5] == 1 && visited[5] == 1"></ion-icon>
+      <ion-icon name="radio-button-off" class="off" *ngIf = "flag[5] == 2 && visited[5] == 1"></ion-icon>
+    </ion-col>
+    <ion-col col-4 *ngIf="visited[5]==1">
+      <ion-icon name="close" class="close" *ngIf = "flag[5] == 1 && visited[5] == 1"></ion-icon>
+      <ion-icon name="radio-button-off" class="off" *ngIf = "flag[5] == 2 && visited[5] == 1"></ion-icon>
+    </ion-col>
+
+  </ion-row>
+  <ion-row>
+    <ion-col col-4 *ngIf="visited[6]==0" tappable (click)='cellSelect(6)'>
+      <ion-icon name="close" class="close" *ngIf = "flag[6] == 1 && visited[6] == 1"></ion-icon>
+      <ion-icon name="radio-button-off" class="off" *ngIf = "flag[6] == 2 && visited[6] == 1"></ion-icon>
+    </ion-col>
+    <ion-col col-4 *ngIf="visited[6]==1">
+      <ion-icon name="close" class="close" *ngIf = "flag[6] == 1 && visited[6] == 1"></ion-icon>
+      <ion-icon name="radio-button-off" class="off" *ngIf = "flag[6] == 2 && visited[6] == 1"></ion-icon>
+    </ion-col>
+
+    <ion-col col-4 *ngIf="visited[7]==0" tappable (click)='cellSelect(7)'>
+      <ion-icon name="close" class="close" *ngIf = "flag[7] == 1 && visited[7] == 1"></ion-icon>
+      <ion-icon name="radio-button-off" class="off" *ngIf = "flag[7] == 2 && visited[7] == 1"></ion-icon>
+    </ion-col>
+    <ion-col col-4 *ngIf="visited[7]==1">
+      <ion-icon name="close" class="close" *ngIf = "flag[7] == 1 && visited[7] == 1"></ion-icon>
+      <ion-icon name="radio-button-off" class="off" *ngIf = "flag[7] == 2 && visited[7] == 1"></ion-icon>
+    </ion-col>
+
+    <ion-col col-4 *ngIf="visited[8]==0" tappable (click)='cellSelect(8)'>
+      <ion-icon name="close" class="close" *ngIf = "flag[8] == 1 && visited[8] == 1"></ion-icon>
+      <ion-icon name="radio-button-off" class="off" *ngIf = "flag[8] == 2 && visited[8] == 1"></ion-icon>
+    </ion-col>
+    <ion-col col-4 *ngIf="visited[8]==1">
+      <ion-icon name="close" class="close" *ngIf = "flag[8] == 1 && visited[8] == 1"></ion-icon>
+      <ion-icon name="radio-button-off" class="off" *ngIf = "flag[8] == 2 && visited[8] == 1"></ion-icon>
+    </ion-col>
+
+  </ion-row>
+</ion-grid>
+
+<button ion-button full (click)="ionViewWillEnter()">New Game</button>
+</ion-content>

@@ -1,0 +1,37 @@
+page-multiplayer {
+  .col{
+    border:2px solid white!important;
+    height: 25%!important;
+    background-color: #008066;
+  }
+
+  [col-4]{
+    height: 15vh!important;
+  }
+
+  .grid{
+    padding-top: 10vh;
+    color: #00e6b8!important;
+  }
+
+ion-title{
+  color:red!important;
+}
+  .close{
+font-size: 5em !important;
+    color: white !important;
+    margin-left: 20%;
+  }
+  .off{
+    font-size: 5em !important;
+    color: white !important;
+    margin-left: 10%;
+  }
+
+  
+  .button-inner{
+    color:white;
+  }
+
+  
+}
